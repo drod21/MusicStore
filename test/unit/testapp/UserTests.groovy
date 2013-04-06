@@ -12,7 +12,11 @@ import org.junit.*
 class UserTests {
 
     void testUserRegister() {
-       def user = new User(firstName: 'John', lastName: 'Doe')
-	assert user.getFirstName().equals('John'), getLastName().equals('Doe')
+       	def user = new User(login:'drod2169',
+		password:'letmein',
+		email:'drod2169@gmail.com',
+		firstName:'Derek',
+		lastName:'Rodriguez')
+	assert user.getFirstName().equals('Derek'), getLastName().equals('Rodriguez')
     }
 }
