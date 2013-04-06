@@ -1,8 +1,19 @@
 package testapp
 
 class ShoppingCart {
+	static hasMany = [albums:Album]
 
-	static hasOne = [user:User]
+	ShoppingCart(){
+		albums = [""]
+	}
+
+	def addAlbum(Album album) {
+	
+	}
+
+	def deleteAlbum(Album album) {
+	
+	}
 
     static constraints = {
     }
