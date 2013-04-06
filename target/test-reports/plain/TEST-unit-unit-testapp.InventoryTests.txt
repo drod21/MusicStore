@@ -1,0 +1,10 @@
+Testsuite: testapp.InventoryTests
+Tests run: 1, Failures: 0, Errors: 0, Time elapsed: 0.236 sec
+------------- Standard Output ---------------
+--Output from testAddAlbumToInventory--
+------------- ---------------- ---------------
+------------- Standard Error -----------------
+--Output from testAddAlbumToInventory--
+------------- ---------------- ---------------
+
+Testcase: testAddAlbumToInventory took 0.111 sec

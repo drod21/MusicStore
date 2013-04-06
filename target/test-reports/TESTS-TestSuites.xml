@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuites>
+  <testsuite errors="0" failures="1" hostname="drod2169" id="0" name="AlbumControllerTests" package="testapp" tests="1" time="0.478" timestamp="2013-04-06T17:56:10">
+      <properties />
+
+      <testcase classname="testapp.AlbumControllerTests" name="testSomething" time="0.261">
+          <failure message="junit.framework.AssertionFailedError: Implement me" type="junit.framework.AssertionFailedError">junit.framework.AssertionFailedError: junit.framework.AssertionFailedError: Implement me
+	at testapp.AlbumControllerTests.testSomething(AlbumControllerTests.groovy:15)
+</failure>
+
+      </testcase>
+
+      <system-out><![CDATA[--Output from testSomething--
+]]></system-out>
+
+      <system-err><![CDATA[--Output from testSomething--
+]]></system-err>
+
+  </testsuite>
+  <testsuite errors="0" failures="1" hostname="drod2169" id="1" name="AlbumTests" package="testapp" tests="1" time="0.28" timestamp="2013-04-06T17:56:12">
+      <properties />
+
+      <testcase classname="testapp.AlbumTests" name="testSomething" time="0.101">
+          <failure message="junit.framework.AssertionFailedError: Implement me" type="junit.framework.AssertionFailedError">junit.framework.AssertionFailedError: junit.framework.AssertionFailedError: Implement me
+	at testapp.AlbumTests.testSomething(AlbumTests.groovy:15)
+</failure>
+
+      </testcase>
+
+      <system-out><![CDATA[--Output from testSomething--
+]]></system-out>
+
+      <system-err><![CDATA[--Output from testSomething--
+]]></system-err>
+
+  </testsuite>
+  <testsuite errors="0" failures="1" hostname="drod2169" id="2" name="GenreTests" package="testapp" tests="1" time="0.271" timestamp="2013-04-06T17:56:12">
+      <properties />
+
+      <testcase classname="testapp.GenreTests" name="testSomething" time="0.079">
+          <failure message="junit.framework.AssertionFailedError: Implement me" type="junit.framework.AssertionFailedError">junit.framework.AssertionFailedError: junit.framework.AssertionFailedError: Implement me
+	at testapp.GenreTests.testSomething(GenreTests.groovy:15)
+</failure>
+
+      </testcase>
+
+      <system-out><![CDATA[--Output from testSomething--
+]]></system-out>
+
+      <system-err><![CDATA[--Output from testSomething--
+]]></system-err>
+
+  </testsuite>
+  <testsuite errors="0" failures="0" hostname="drod2169" id="3" name="InventoryTests" package="testapp" tests="1" time="0.236" timestamp="2013-04-06T17:56:11">
+      <properties />
+
+      <testcase classname="testapp.InventoryTests" name="testAddAlbumToInventory" time="0.111" />
+
+      <system-out><![CDATA[--Output from testAddAlbumToInventory--
+]]></system-out>
+
+      <system-err><![CDATA[--Output from testAddAlbumToInventory--
+]]></system-err>
+
+  </testsuite>
+  <testsuite errors="0" failures="1" hostname="drod2169" id="4" name="ShoppingCartTests" package="testapp" tests="1" time="0.228" timestamp="2013-04-06T17:56:11">
+      <properties />
+
+      <testcase classname="testapp.ShoppingCartTests" name="testSomething" time="0.094">
+          <failure message="junit.framework.AssertionFailedError: Implement me" type="junit.framework.AssertionFailedError">junit.framework.AssertionFailedError: junit.framework.AssertionFailedError: Implement me
+	at testapp.ShoppingCartTests.testSomething(ShoppingCartTests.groovy:15)
+</failure>
+
+      </testcase>
+
+      <system-out><![CDATA[--Output from testSomething--
+]]></system-out>
+
+      <system-err><![CDATA[--Output from testSomething--
+]]></system-err>
+
+  </testsuite>
+  <testsuite errors="0" failures="1" hostname="drod2169" id="5" name="SongControllerTests" package="testapp" tests="1" time="0.386" timestamp="2013-04-06T17:56:12">
+      <properties />
+
+      <testcase classname="testapp.SongControllerTests" name="testSomething" time="0.247">
+          <failure message="junit.framework.AssertionFailedError: Implement me" type="junit.framework.AssertionFailedError">junit.framework.AssertionFailedError: junit.framework.AssertionFailedError: Implement me
+	at testapp.SongControllerTests.testSomething(SongControllerTests.groovy:15)
+</failure>
+
+      </testcase>
+
+      <system-out><![CDATA[--Output from testSomething--
+]]></system-out>
+
+      <system-err><![CDATA[--Output from testSomething--
+]]></system-err>
+
+  </testsuite>
+  <testsuite errors="0" failures="1" hostname="drod2169" id="6" name="SongTests" package="testapp" tests="1" time="0.111" timestamp="2013-04-06T17:56:13">
+      <properties />
+
+      <testcase classname="testapp.SongTests" name="testSomething" time="0.11">
+          <failure message="junit.framework.AssertionFailedError: Implement me" type="junit.framework.AssertionFailedError">junit.framework.AssertionFailedError: junit.framework.AssertionFailedError: Implement me
+	at testapp.SongTests.testSomething(SongTests.groovy:15)
+</failure>
+
+      </testcase>
+
+      <system-out><![CDATA[--Output from testSomething--
+]]></system-out>
+
+      <system-err><![CDATA[--Output from testSomething--
+]]></system-err>
+
+  </testsuite>
+  <testsuite errors="0" failures="1" hostname="drod2169" id="7" name="StoreControllerTests" package="testapp" tests="1" time="0.386" timestamp="2013-04-06T17:56:11">
+      <properties />
+
+      <testcase classname="testapp.StoreControllerTests" name="testSomething" time="0.234">
+          <failure message="junit.framework.AssertionFailedError: Implement me" type="junit.framework.AssertionFailedError">junit.framework.AssertionFailedError: junit.framework.AssertionFailedError: Implement me
+	at testapp.StoreControllerTests.testSomething(StoreControllerTests.groovy:15)
+</failure>
+
+      </testcase>
+
+      <system-out><![CDATA[--Output from testSomething--
+]]></system-out>
+
+      <system-err><![CDATA[--Output from testSomething--
+]]></system-err>
+
+  </testsuite>
+  <testsuite errors="0" failures="1" hostname="drod2169" id="8" name="StoreTests" package="testapp" tests="1" time="0.233" timestamp="2013-04-06T17:56:10">
+      <properties />
+
+      <testcase classname="testapp.StoreTests" name="testSomething" time="0.091">
+          <failure message="junit.framework.AssertionFailedError: Implement me" type="junit.framework.AssertionFailedError">junit.framework.AssertionFailedError: junit.framework.AssertionFailedError: Implement me
+	at testapp.StoreTests.testSomething(StoreTests.groovy:15)
+</failure>
+
+      </testcase>
+
+      <system-out><![CDATA[--Output from testSomething--
+]]></system-out>
+
+      <system-err><![CDATA[--Output from testSomething--
+]]></system-err>
+
+  </testsuite>
+  <testsuite errors="0" failures="0" hostname="drod2169" id="9" name="UserTests" package="testapp" tests="1" time="0.251" timestamp="2013-04-06T17:56:11">
+      <properties />
+
+      <testcase classname="testapp.UserTests" name="testUserRegister" time="0.083" />
+
+      <system-out><![CDATA[--Output from testUserRegister--
+]]></system-out>
+
+      <system-err><![CDATA[--Output from testUserRegister--
+]]></system-err>
+
+  </testsuite>
+</testsuites>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuite errors="0" failures="0" hostname="drod2169" name="testapp.InventoryTests" tests="1" time="0.236" timestamp="2013-04-06T17:56:11">
+  <properties />
+  <testcase classname="testapp.InventoryTests" name="testAddAlbumToInventory" time="0.111" />
+  <system-out><![CDATA[--Output from testAddAlbumToInventory--
+]]></system-out>
+  <system-err><![CDATA[--Output from testAddAlbumToInventory--
+]]></system-err>
+</testsuite>
