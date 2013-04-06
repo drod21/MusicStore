@@ -1,7 +1,6 @@
 package testapp
 
 class User {
-	static hasOne = [shoppingcart:ShoppingCart]
 
 	String login
 	String password
