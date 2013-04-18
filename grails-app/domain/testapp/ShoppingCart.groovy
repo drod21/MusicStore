@@ -1,6 +1,7 @@
 package testapp
 
 class ShoppingCart {
+	static belongsTo = [user:User]
 	static hasMany = [albums:Album]
 
 	ShoppingCart(){
@@ -8,12 +9,16 @@ class ShoppingCart {
 	}
 
 	def addAlbum(Album album) {
-	
+	new Album()
 	}
 
-	def deleteAlbum(Album album) {
-	
+	def removeFromCart(Album album) {
+	Album.findByTitle("")
+	cart.albums.find { it.title = ' ' }
+	cart.removeFromAlbums(album)
 	}
+
+
 
     static constraints = {
     }
