@@ -1,17 +1,26 @@
 package testapp
 
 class User {
-
 	String login
 	String password
 	String firstName
 	String lastName
-	String email
+
+	static hasMany = [purchasedSongs:Song]
+
+	def addToCart(ShoppingCart cart) {
+		cart.addAlbum()
+	}
+	
+	def removeFromCart(ShoppingCart cart) {
+		cart.removeFromAlbums(album)
+	}
+		
+
 
     static constraints = {
-	login(unique:true,length:5..15)
-	password(matches:/[\w\d]+/, length:6..12)
-	email(email:true)
+	login(blank:false, unique:true, size:5..15)
+	password(blank:false, matches:/[\w\d]+/, size:5..15)
 	firstName(blank:false)
 	lastName(blank:false)
     }
