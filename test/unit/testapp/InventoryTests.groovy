@@ -17,4 +17,11 @@ class InventoryTests {
 	Integer count = inventory.albums.size()
 	assert count == 1       
     }
+
+    void testRemoveAlbumFromInventory() {
+	def inventory = new Inventory()
+	inventory.delete()
+	Integer count = inventory.albums.size()
+	assert count == 1
+	}
 }
