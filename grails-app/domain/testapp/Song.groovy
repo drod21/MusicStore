@@ -5,7 +5,7 @@ class Song {
 	String artist
 	Integer duration
 
-	static belongsTo = [album:Album]
+	static belongsTo = Album
 
     static constraints = {
 	title(blank:false)
