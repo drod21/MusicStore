@@ -8,16 +8,11 @@ class ShoppingCart {
 		albums = [""]
 	}
 
-	def addAlbum(Album album) {
-	new Album()
-	}
+    def addAlbum(Album album) {
+    }
 
-	def removeFromCart(Album album) {
-	Album.findByTitle("")
-	cart.albums.find { it.title = ' ' }
-	cart.removeFromAlbums(album)
-	}
-
+    def deleteAlbum(Album album) {
+    }
 
 
     static constraints = {
