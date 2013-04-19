@@ -1,0 +1,8 @@
+# Ignore test reports
+
+target/test-reports/*
+
+# Project generated files #
+###########################
+
+target/classes/*
