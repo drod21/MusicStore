@@ -8,15 +8,6 @@ class User {
 
 	static hasMany = [purchasedSongs:Song]
 
-	def addToCart(ShoppingCart cart) {
-		cart.addAlbum()
-	}
-	
-	def removeFromCart(ShoppingCart cart) {
-		cart.removeFromAlbums(album)
-	}
-		
-
 
     static constraints = {
 	login(blank:false, unique:true, size:5..15)
