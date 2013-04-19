@@ -8,4 +8,5 @@ class Artist {
     static constraints = {
 	name(blank: false)
     }
+    String toString() { name }
 }
