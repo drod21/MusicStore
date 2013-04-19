@@ -1,8 +1,7 @@
-# Ignore test reports
-
-target/test-reports/*
-
 # Project generated files #
 ###########################
 
 target/classes/*
+target/test-reports/*
+target/test-classes/*
+target/stacktrace.log
