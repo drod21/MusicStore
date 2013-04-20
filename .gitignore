@@ -2,6 +2,7 @@
 ###########################
 
 target/classes/*
+target/classes/testapp/*
 target/test-reports/*
 target/test-classes/*
 target/stacktrace.log
