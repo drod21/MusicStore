@@ -8,11 +8,15 @@ class ShoppingCart {
 		albums = [""]
 	}
 
-    def addAlbum(Album album) {
+    def addAlbum() {
+        def addAlbum
+        addAlbum = new Album(params.id)
     }
 
     def deleteAlbum(Album album) {
-    }
+        Album.get(params.id)
+        def cart
+        cart = cart.removeFromAlbums(album)
 
 
     static constraints = {
