@@ -19,9 +19,11 @@ class InventoryTests {
     }
 
     void testRemoveAlbumFromInventory() {
-	def inventory = new Inventory()
-	inventory.delete()
-	Integer count = inventory.albums.size()
-	assert count == 1
+        Inventory inventory = new Inventory()
+        inventory.addAlbum(new Album(title:'Me Against The World'))
+        def album = Album.getId(1)
+        album.delete(flush: true)
+        Integer count = inventory.albums.size()
+        assert count == 0
 	}
 }
