@@ -9,11 +9,15 @@ class Inventory {
 		albums = [""]
 	}
 
-	def addAlbum(Album album) {
-	}
+	def addAlbum() {
+        def addAlbum
+        addAlbum = new Album(params.id)
+    }
 
 	def deleteAlbum(Album album) {
-	}
+        Album.get(params.id)
+        def var = cart.removeFromAlbums(album)
+    }
 
     static constraints = {
     }
