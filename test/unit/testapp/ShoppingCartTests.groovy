@@ -13,7 +13,8 @@ class ShoppingCartTests {
     void testAddToCart() {
     @Mock([ShoppingCart, Album])
 	def cart = new ShoppingCart()
-	cart.addAlbum(new Album(title:'All Eyes On Me'))
+	def album = new Album(title:'All Eyes On Me')
+	cart.addAlbum(album)
 	Integer count = cart.albums.size()
 	assert count == 1
     }
@@ -21,8 +22,11 @@ class ShoppingCartTests {
     void testRemoveFromCart() {
     @Mock([ShoppingCart, Album])
 	def cart = new ShoppingCart()
-	cart.addAlbum(new Album(title:'All Eyes On Me'))
+	def album = new Album(title:'All Eyes On Me')
+	cart.addAlbum(album)
 	Album.findByTitle("All Eyes On Me")
 	cart.removeFromAlbums(album)
+	Integer count = cart.albums.size()
+	assert count == 0
 	}
 }

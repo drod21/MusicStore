@@ -9,7 +9,8 @@ class ShoppingCart {
 	}
 
     def addAlbum(Album album) {
-        cart.addToAlbums(new Album(params.id))
+	album = getAlbum(params.id)
+	album.addAlbum(album)
     }
 
     def deleteAlbum(Album album) {
