@@ -12,14 +12,16 @@ import org.junit.*
 class InventoryTests {
 
     void testAddAlbumToInventory() {
-	Inventory inventory = new Inventory()
+	@Mock([Inventory, Album])
+	def inventory = new Inventory()
 	inventory.addAlbum(new Album(title:'Me Against The World'))
 	Integer count = inventory.albums.size()
 	assert count == 1       
     }
 
     void testRemoveAlbumFromInventory() {
-        Inventory inventory = new Inventory()
+	@Mock([Inventory, Album])
+        def inventory = new Inventory()
         inventory.addAlbum(new Album(title:'Me Against The World'))
         def album = Album.getId(1)
         album.delete(flush: true)
