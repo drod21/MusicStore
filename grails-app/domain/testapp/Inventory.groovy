@@ -9,9 +9,8 @@ class Inventory {
 		albums = [""]
 	}
 
-	def addAlbum() {
-        def addAlbum
-        Inventory.addAlbum = new Album(params.id)
+	def addAlbum(Album album) {
+        addAlbum = new Album(params.id)
     }
 
 	def deleteAlbum(Album album) {
