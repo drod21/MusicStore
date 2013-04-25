@@ -1,0 +1,340 @@
+#
+# A fatal error has been detected by the Java Runtime Environment:
+#
+#  SIGSEGV (0xb) at pc=0x00007fefc77df467, pid=13383, tid=140665413433088
+#
+# JRE version: 6.0_27-b27
+# Java VM: OpenJDK 64-Bit Server VM (20.0-b12 mixed mode linux-amd64 compressed oops)
+# Derivative: IcedTea6 1.12.3
+# Distribution: Ubuntu 12.04 LTS, package 6b27-1.12.3-0ubuntu1~12.04.1
+# Problematic frame:
+# V  [libjvm.so+0x3b4467]  constantPoolOopDesc::klass_at_impl(constantPoolHandle, int, Thread*)+0x97
+#
+# If you would like to submit a bug report, please include
+# instructions how to reproduce the bug and visit:
+#   https://bugs.launchpad.net/ubuntu/+source/openjdk-6/
+#
+
+---------------  T H R E A D  ---------------
+
+Current thread (0x00007fefc0124000):  JavaThread "FileSystemWatcher: files=#10 cl=groovy.lang.GroovyClassLoader@3968a6fe" daemon [_thread_in_vm, id=13480, stack(0x00007fef37eff000,0x00007fef38000000)]
+
+siginfo:si_signo=SIGSEGV: si_errno=0, si_code=1 (SEGV_MAPERR), si_addr=0x0000000000000008
+
+Registers:
+RAX=0x00000000cfcc3570, RBX=0x00007fef91ec7678, RCX=0x00007fefc0124000, RDX=0x0000000000000000
+RSP=0x00007fef37ffd5b0, RBP=0x00007fef37ffd990, RSI=0x00007fefc7fbe830, RDI=0x00007fef91ec7678
+R8 =0x00007fef91ec7670, R9 =0x00000000000006c4, R10=0x00007fefc7fe9d40, R11=0x00007fefc0d54820
+R12=0x0000000000000000, R13=0x0000000000000000, R14=0x00007fefc0124000, R15=0x00007fefc7fd2f6a
+RIP=0x00007fefc77df467, EFLAGS=0x0000000000010202, CSGSFS=0x0000000000000033, ERR=0x0000000000000004
+  TRAPNO=0x000000000000000e
+
+Top of Stack: (sp=0x00007fef37ffd5b0)
+0x00007fef37ffd5b0:   00007fef921d8a60 00007fefc0b8f8c0
+0x00007fef37ffd5c0:   00007fef37ffd670 00007fefc7ae4799
+0x00007fef37ffd5d0:   00007fef91ec76d8 00000000cfce2c80
+0x00007fef37ffd5e0:   00007fef91ec7728 00007fef921d8e48
+0x00007fef37ffd5f0:   00007fef91ec7720 00007fef00000000
+0x00007fef37ffd600:   00007fef37ffd640 00007fffeaeb0ca1
+0x00007fef37ffd610:   00007fef37ffd640 00007fefc7a562bc
+0x00007fef37ffd620:   00007fef37ffd640 00007fef37ffd760
+0x00007fef37ffd630:   00007fef37ffd660 00007fefc7a562bc
+0x00007fef37ffd640:   00007fef37ffd660 00007fef37ffd760
+0x00007fef37ffd650:   00007fef37ffda80 00007fefbd000438
+0x00007fef37ffd660:   00007fef37ffd6c0 00007fefc7842a43
+0x00007fef37ffd670:   0000000000000000 00007fefbd000310
+0x00007fef37ffd680:   00007fef37ffe8f8 00007fef37ffe960
+0x00007fef37ffd690:   00007fefc0124000 00007fef37ffd760
+0x00007fef37ffd6a0:   00007fef37ffda80 00007fef37ffd790
+0x00007fef37ffd6b0:   00000000c004c013 00007fefbd005d34
+0x00007fef37ffd6c0:   00007fef37ffd6f0 00007fefc7842d5e
+0x00007fef37ffd6d0:   00007fef37ffd6f0 00007fefc0b8f8c0
+0x00007fef37ffd6e0:   0000000000000000 00007fef91ec76a8
+0x00007fef37ffd6f0:   00007fef37ffdb10 00007fefc78dff47
+0x00007fef37ffd700:   00007fefc000c5c0 00007fefc000c6c0
+0x00007fef37ffd710:   00007fef91ec76b8 00007fef91ec76a8
+0x00007fef37ffd720:   00007fef921d8a60 00007fefc0b8f8c0
+0x00007fef37ffd730:   00007fefc0124000 010100000000000b
+0x00007fef37ffd740:   00007fefbd8b6250 00007fef921d8e48
+0x00007fef37ffd750:   00007fef921d8a70 0000000000000400
+0x00007fef37ffd760:   00007fef37ffe8f8 00007fefbd000438
+0x00007fef37ffd770:   00007fefbd000310 00007fef00000000
+0x00007fef37ffd780:   00007fef37ffe960 00007fef37ffe8f8
+0x00007fef37ffd790:   0000000000000001 00007fef91ec7601
+0x00007fef37ffd7a0:   00007fefc0124000 00007fef91ec76c0 
+
+Instructions: (pc=0x00007fefc77df467)
+0x00007fefc77df447:   8b 65 e0 4c 8b 6d e8 4c 8b 75 f0 4c 8b 7d f8 c9
+0x00007fefc77df457:   c3 0f 1f 84 00 00 00 00 00 48 8b 35 01 83 7c 00
+0x00007fefc77df467:   8b 42 08 8b 4e 08 48 d3 e0 48 03 06 eb aa 0f 1f
+0x00007fefc77df477:   00 48 8d 7d a0 b9 01 00 00 00 4c 89 f2 48 89 de 
+
+Register to memory mapping:
+
+RAX=0x00000000cfcc3570 is an oop
+{constant pool} 
+ - klass: {other class}
+ - cache: 0x00000000cffe5d80
+ -   1 :  : 'testapp/Admin$$EO2jkq3c'
+ -   2 :  : 'testapp/Admin$$EO2jkq3c'
+ -   3 :  : 'java/lang/Object'
+ -   4 :  : 'java/lang/Object'
+ -   5 :  : 'Admin.groovy'
+ -   6 :  : 'Lgrails/artefact/Enhanced;'
+ -   7 :  : 'version'
+ -   8 :  : '2.1.2'
+ -   9 :  : 'Lgrails/persistence/Entity;'
+ -  10 :  : 'hasOne'
+ -  11 :  : 'Ljava/lang/Object;'
+ -  12 :  : 'adminName'
+ -  13 :  : 'Ljava/lang/String;'
+ -  14 :  : 'inventory'
+ -  15 :  : 'constraints'
+ -  16 :  : 'instanceControllersDomainBindingApi'
+ -  17 :  : 'Lorg/codehaus/groovy/grails/plugins/web/api/ControllersDomainBindingApi;'
+ -  18 :  : '$defaultDatabindingWhiteList'
+ -  19 :  : 'Ljava/util/List;'
+ -  20 :  : 'instanceDatabindingApi'
+ -  21 :  : 'Lorg/codehaus/groovy/grails/web/binding/DatabindingApi;'
+ -  22 :  : 'log'
+ -  23 :  : 'Lorg/apache/commons/logging/Log;'
+ -  24 :  : 'instanceConvertersApi'
+ -  25 :  : 'Lorg/codehaus/groovy/grails/plugins/converters/api/ConvertersApi;'
+ -  26 :  : '$staticClassInfo'
+ -  27 :  : 'Lorg/codehaus/groovy/reflection/ClassInfo;'
+ -  28 :  : '__$stMC'
+ -  29 :  : 'Z'
+ -  30 :  : '__timeStamp'
+ -  31 :  : 'J'
+ -  32 :  : '__timeStamp__239_neverHappen1365714018832'
+ -  33 :  : '$callSiteArray'
+ -  34 :  : 'Ljava/lang/ref/SoftReference;'
+ -  35 :  : '$class$org$grails$datastore$gorm$GormValidationApi'
+ -  36 :  : 'Ljava/lang/Class;'
+ -  37 :  : '$class$org$grails$datastore$gorm$GormStaticApi'
+ -  38 :  : '$class$groovy$lang$MissingMethodException'
+ -  39 :  : '$class$java$lang$String'
+ -  40 :  : '$class$testapp$Inventory'
+ -  41 :  : '$class$org$apache$commons$logging$LogFactory'
+ -  42 :  : '$class$testapp$Album'
+ -  43 :  : '$class$testapp$Admin'
+ -  44 :  : '$class$org$codehaus$groovy$grails$plugins$web$api$ControllersDomainBindingApi'
+ -  45 :  : '$class$org$codehaus$groovy$grails$web$binding$DatabindingApi'
+ -  46 :  : '$class$org$codehaus$groovy$grails$plugins$converters$api$ConvertersApi'
+ -  47 :  : '$class$org$apache$commons$logging$Log'
+ -  48 :  : '$class$org$grails$datastore$gorm$GormInstanceApi'
+ -  49 :  : '___init___'
+ -  50 :  : '(Ltestapp/Admin;)V'
+ -  51 :  : 'testapp/User'
+ -  52 :  : 'testapp/User'
+ -  53 :  : '()V'
+ -  54 :  : name_index=49 signature_index=53
+ -  55 :  : klass_index=52 name_and_type_index=54
+ -  56 :  : '$getCallSiteArray'
+ -  57 :  : '()[Lorg/codehaus/groovy/runtime/callsite/CallSite;'
+ -  58 :  : name_index=56 signature_index=57
+ -  59 :  : klass_index=2 name_and_type_index=58
+ -  60 :  : 'testapp/Admin$1'
+ -  61 :  : 'testapp/Admin$1'
+ -  62 :  : '<init>'
+ -  63 :  : name_index=62 signature_index=50
+ -  64 :  : klass_index=61 name_and_type_index=63
+ -  65 :  : 21627923
+ -  66 :  : "inventory" {0xc2f8f478}
+ -  67 :  : 'com/springsource/loaded/TypeRegistry'
+ -  68 :  : 'com/springsource/loaded/TypeRegistry'
+ -  69 :  : 'instanceFieldInterceptionRequired'
+ -  70 :  : '(ILjava/lang/String;)Z'
+ -  71 :  : name_index=69 signature_index=70
+ -  72 :  : klass_index=68 name_and_type_index=71
+ -  73 :  : 'testapp/Admin'
+ -  74 :  : 'testapp/Admin'
+ -  75 :  : 'r$set'
+ -  76 :  : '(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/String;)V'
+ -  77 :  : name_index=75 signature_index=76
+ -  78 :  : klass_index=74 name_and_type_index=77
+ -  79 :  : name_index=14 signature_index=11
+ -  80 :  : klass_index=74 name_and_type_index=79
+ -  81 :  : 'org/codehaus/groovy/grails/plugins/web/api/ControllersDomainBindingApi'
+ -  82 :  : 'org/codehaus/groovy/grails/plugins/web/api/ControllersDomainBindingApi'
+ -  83 :  : 'initialize'
+ -  84 :  : '(Ljava/lang/Object;)V'
+ -  85 :  : name_index=83 signature_index=84
+ -  86 :  : klass_index=82 name_and_type_index=85
+ -  87 :  : 'thiz'
+ -  88 :  : 'Ltestapp/Admin;'
+ -  89 :  : '(Ltestapp/Admin;Ljava/util/Map;)V'
+ -  90 :  : 'java/util/Map'
+ -  91 :  : 'java/util/Map'
+ -  92 :  : '(Ljava/lang/Object;Ljava/util/Map;)V'
+ -  93 :  : name_index=83 signature_index=92
+ -  94 :  : klass_index=82 name_and_type_index=93
+ -  95 :  : 'param1'
+ -  96 :  : 'Ljava/util/Map;'
+ -  97 :  : 'addAlbum'
+ -  98 :  : '(Ltestapp/Admin;Ltestapp/Album;)Ljava/lang/Object;'
+ -  99 :  : 0
+ - 100 :  : '$get$$class$testapp$Album()Ljava/lang/Class;'
+ - 101 :  : "$get$$class$testapp$Album()Ljava/lang/Class;" {0xc2efc978}
+ - 102 :  : 'istcheck'
+ - 103 :  : '(ILjava/lang/String;)Ljava/lang/Object;'
+ - 104 :  : name_index=102 signature_index=103
+ - 105 :  : klass_index=68 name_and_type_index=104
+ - 106 :  : 'testapp/Admin__I'
+ - 107 :  : 'testapp/Admin__I'
+ - 108 :  : '__execute'
+ - 109 :  : '([Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;'
+ - 110 :  : name_index=108 signature_index=109
+ - 111 :  : klass_index=107 name_and_type_index=110
+ - 112 :  : 'java/lang/Class'
+ - 113 :  : 'java/lang/Class'
+ - 114 :  : '$get$$class$testapp$Album'
+ - 115 :  : '()Ljava/lang/Class;'
+ - 116 :  : name_index=114 signature_index=115
+ - 117 :  : klass_index=2 name_and_type_index=116
+ - 118 :  : 'title'
+ - 119 :  : "title" {0xc1458788}
+ - 120 :  : 1
+ - 121 :  : 'org/codehaus/groovy/runtime/callsite/CallSite'
+ - 122 :  : 'org/codehaus/groovy/runtime/callsite/CallSite'
+ - 123 :  : 'callGroovyObjectGetProperty'
+ - 124 :  : '(Ljava/lang/Object;)Ljava/lang/Object;'
+ - 125 :  : name_index=123 signature_index=124
+ - 126 :  : klass_index=122 name_and_type_index=125
+ - 127 :  : 'org/codehaus/groovy/runtime/ScriptBytecodeAdapter'
+ - 128 :  : 'org/codehaus/groovy/runtime/ScriptBytecodeAdapter'
+ - 129 :  : 'createMap'
+ - 130 :  : '([Ljava/lang/Object;)Ljava/util/Map;'
+ - 131 :  : name_index=129 signature_index=130
+ - 132 :  : klass_index=128 name_and_type_index=131
+ - 133 :  : 'callConstructor'
+ - 134 :  : '(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;'
+ - 135 :  : name_index=133 signature_index=134
+ - 136 :  : klass_index=122 name_and_type_index=135
+ - 137 :  : 'album'
+ - 138 :  : 'Ltestapp/Album;'
+ - 139 :  : 'deleteAlbum'
+ - 140 :  : 2
+ - 141 :  : 3
+ - 142 :  : 'call'
+ - 143 :  : name_index=142 signature_index=134
+ - 144 :  : klass_index=122 name_and_type_index=143
+ - 145 :  : 'this$dist$invoke$2'
+ - 146 :  : '(Ltestapp/Admin;Ljava/lang/String;Ljava/lang/Object;)Ljava/lang/Object;'
+ - 147 :  : '$get$$class$testapp$Admin()Ljava/lang/Class;'
+ - 148 :  : "$get$$class$testapp$Admin()Ljava/lang/Class;" {0xc2f8b540}
+ - 149 :  : '$get$$class$testapp$Admin'
+ - 150 :  : name_index=149 signature_index=115
+ - 151 :  : klass_index=2 name_and_type_index=150
+ - 152 :  : 'org/codehaus/groovy/runtime/GStringImpl'
+ - 153 :  : 'org/codehaus/groovy/runtime/GStringImpl'
+ - 154 :  : 'java/lang/String'
+ - 155 :  : 'java/lang/String'
+ - 156 :  : ''
+ - 157 :  : "" {0xc0101b10}
+ - 158 :  : '([Ljava/lang/Object;[Ljava/lang/String;)V'
+ - 159 :  : name_index=62 signature_index=158
+ - 160 :  : klass_index=153 name_and_type_index=159
+ - 161 :  : '$get$$class$java$lang$String()Ljava/lang/Class;'
+ - 162 :  : "$get$$class$java$lang$String()Ljava/lang/Class;" {0xc374e088}
+ - 163 :  : '$get$$class$java$lang$String'
+ - 164 :  : name_index=163 signature_index=115
+ - 165 :  : klass_index=2 name_and_type_index=164
+ - 166 :  : 'castToType'
+ - 167 :  : '(Ljava/lang/Object;Ljava/lang/Class;)Ljava/lang/Object;'
+ - 168 :  : name_index=166 signature_index=167
+ - 169 :  : klass_index=128 name_and_type_index=168
+ - 170 :  : 'despreadList'
+ - 171 :  : '([Ljava/lang/Object;[Ljava/lang/Object;[I)[Ljava/lang/Object;'
+ - 172 :  : name_index=170 signature_index=171
+ - 173 :  : klass_index=128 name_and_type_index=172
+ - 174 :  : 'invokeMethodOnCurrentN'
+ - 175 :  : '(Ljava/lang/Class;Lgroovy/lang/GroovyObject;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/Object;'
+ - 176 :  : name_index=174 signature_index=175
+ - 177 :  : klass_index=128 name_and_type_index=176
+ - 178 :  : 'name'
+ - 179 :  : 'args'
+ - 180 :  : 'this$dist$set$2'
+ - 181 :  : '(Ltestapp/Admin;Ljava/lang/String;Ljava/lang/Object;)V'
+ - 182 :  : 'setGroovyObjectField'
+ - 183 :  : '(Ljava/lang/Object;Ljava/lang/Class;Lgroovy/lang/GroovyObject;Ljava/lang/String;)V'
+ - 184 :  : name_index=182 signature_index=183
+ - 185 :  : klass_index=128 name_and_type_index=184
+ - 186 :  : 'value'
+ - 187 :  : 'this$dist$get$2'
+ - 188 :  : '(Ltestapp/Admin;Ljava/lang/String;)Ljava/lang/Object;'
+ - 189 :  : 'getGroovyObjectField'
+ - 190 :  : '(Ljava/lang/Class;Lgroovy/lang/GroovyObject;Ljava/lang/String;)Ljava/lang/Object;'
+ - 191 :  : name_index=189 signature_index=190
+ - 192 :  : klass_index=128 name_and_type_index=191
+ - 193 :  : 'getProperties'
+ - 194 :  : '(Ltestapp/Admin;)Ljava/util/Map;'
+ - 195 :  : "instanceDatabindingApi" {0xc218f648}
+ - 196 :  : 'staticFieldInterceptionRequired'
+ - 197 :  : name_index=196 signature_index=70
+ - 198 :  : klass_index=68 name_and_type_index=197
+ - 199 :  : 'r$gets'
+ - 200 :  : '(Ljava/lang/String;)Ljava/lang/Object;'
+ - 201 :  : name_index=199 signature_index=200
+ - 202 :  : klass_index=74 name_and_type_index=201
+ - 203 :  : 'org/codehaus/groovy/grails/web/binding/DatabindingApi'
+ - 204 :  : 'org/codehaus/groovy/grails/web/binding/DatabindingApi'
+ - 205 :  : name_index=20 signature_index=21
+ - 206 :  : klass_index=74 name_and_type_index=205
+ - 207 :  : 'org/codehaus/groovy/runtime/BytecodeInterface8'
+ - 208 :  : 'org/codehaus/groovy/runtime/BytecodeInterface8'
+ - 209 :  : 'isOrigZ'
+ - 210 :  : '()Z'
+ - 211 :  : name_index=209 signature_index=210
+ - 212 :  : klass_index=208 name_and_type_index=211
+ - 213 :  : "__$stMC" {0xc0972c80}
+ - 214 :  : 'java/lang/Boolean'
+ - 215 :  : 'java/lang/Boolean'
+ - 216 :  : 'booleanValue'
+ - 217 :  : name_index=216 signature_index=210
+ - 218 :  : klass_index=215 name_and_type_index=217
+ - 219 :  : name_index=28 signature_index=29
+ - 220 :  : klass_index=74 name_and_type_index=219
+ - 221 :  : 'disabledStandardMetaClass'
+ - 222 :  : name_index=221 signature_index=210
+ - 223 :  : klass_index=208 name_and_type_index=222
+ - 224 :  : 'compareEqual'
+ - 225 :  : '(Ljava/lang/Object;Ljava/lang/Object;)Z'
+ - 226 :  : name_index=224 signature_index=225
+ - 227 :  : klass_index=128 name_and_type_index=226
+ - 228 :  : 4
+ - 229 :  : '$get$$class$groovy$lang$MissingMethodException()Ljava/lang/Class;'
+ - 230 :  : "$get$$class$groovy$lang$MissingMethodException()Ljava/lang/Class;" {0xcf897f58}
+ - 231 :  : '$get$$class$groovy$lang$MissingMethodException'
+ - 232 :  : name_index=231 signature_index=115
+ - 233 :  : klass_index=2 name_and_type_index=232
+ - 234 :  : "getProperties" {0xc0703038}
+ - 235 :  : '(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;'
+ - 236 :  : name_index=133 signature_index=235
+ - 237 :  : klass_index=122 name_and_type_index=236
+ - 238 :  : 'java/lang/Throwable'
+ - 239 :  : 'java/lang/Throwable'
+ - 240 :  : '(Ljava/lang/Object;)Ljava/util/Map;'
+ - 241 :  : name_index=193 signature_index=240
+ - 242 :  : klass_index=204 name_and_type_index=241
+ - 243 :  : 5
+ - 244 :  : '$api_getProperties'
+ - 245 :  : 'setProperties'
+ - 246 :  : '(Ltestapp/Admin;Ljava/lang/Object;)Lorg/springframework/validation/BindingResult;'
+ - 247 :  : 6
+ - 248 :  : "setProperties" {0xc071a2f0}
+ - 249 :  : '(Ljava/lang/Object;Ljava/lang/Object;)Lorg/springframework/validation/BindingResult;'
+ - 250 :  : name_index=245 signature_index=249
+ - 251 :  : klass_index=204 name_and_type_index=250
+ - 252 :  : 7
+ - 253 :  : '$api_setProperties'
+ - 254 :  : 'validate'
+ - 255 :  : '(Ltestapp/Admin;Ljava/util/Map;)Z'
+ - 256 :  : 8
+ - 257 :  : name_index=142 signature_index=124
+ - 258 :  : klass_index=122 name_and_type_index=257
+ - 259 :  : 9
+ - 260 :  : "validate" {0xc0b64db0}
+ - 261 :  : 10
+ - 262 :  : '$get$$class$org$grails$datastore$gorm$GormValidationApi()Ljava/lang/Class;'
+ - 263 :  : 

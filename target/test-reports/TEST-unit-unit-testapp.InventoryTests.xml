@@ -1,9 +1,16 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite errors="0" failures="0" hostname="drod2169" name="testapp.InventoryTests" tests="1" time="0.236" timestamp="2013-04-06T17:56:11">
+<testsuite errors="1" failures="0" hostname="drod2169" name="testapp.InventoryTests" tests="2" time="0.545" timestamp="2013-04-22T22:07:10">
   <properties />
-  <testcase classname="testapp.InventoryTests" name="testAddAlbumToInventory" time="0.111" />
+  <testcase classname="testapp.InventoryTests" name="testAddAlbumToInventory" time="0.296" />
+  <testcase classname="testapp.InventoryTests" name="testRemoveAlbumFromInventory" time="0.055">
+    <error message="No signature of method: testapp.Album.methodMissing() is applicable for argument types: () values: []" type="groovy.lang.MissingMethodException">groovy.lang.MissingMethodException: No signature of method: testapp.Album.methodMissing() is applicable for argument types: () values: []
+	at testapp.InventoryTests.testRemoveAlbumFromInventory(InventoryTests.groovy:24)
+</error>
+  </testcase>
   <system-out><![CDATA[--Output from testAddAlbumToInventory--
+--Output from testRemoveAlbumFromInventory--
 ]]></system-out>
   <system-err><![CDATA[--Output from testAddAlbumToInventory--
+--Output from testRemoveAlbumFromInventory--
 ]]></system-err>
 </testsuite>

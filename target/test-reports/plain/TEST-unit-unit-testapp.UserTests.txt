@@ -1,5 +1,5 @@
 Testsuite: testapp.UserTests
-Tests run: 1, Failures: 0, Errors: 0, Time elapsed: 0.251 sec
+Tests run: 1, Failures: 0, Errors: 0, Time elapsed: 0.3 sec
 ------------- Standard Output ---------------
 --Output from testUserRegister--
 ------------- ---------------- ---------------
@@ -7,4 +7,4 @@ Tests run: 1, Failures: 0, Errors: 0, Time elapsed: 0.251 sec
 --Output from testUserRegister--
 ------------- ---------------- ---------------
 
-Testcase: testUserRegister took 0.083 sec
+Testcase: testUserRegister took 0.153 sec
