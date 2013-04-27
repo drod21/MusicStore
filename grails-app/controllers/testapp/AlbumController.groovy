@@ -26,7 +26,6 @@ class AlbumController {
             render "Album not found."
         }
     }
-}
 
 def list() {
     params.max = Math.min(params.max ? params.int('max') : 10, 100)
@@ -45,6 +44,7 @@ def show() {
     }
     
     [albumInstance: albumInstance]
+}
 }
 
     class AlbumCreateCommand {
