@@ -1,6 +1,11 @@
 package testapp
 
 class AlbumController {
+    
+    
+    def index() {
+         redirect(action: "list", params: params)
+    }
 
     def save(AlbumCreateCommand cmd) {
         if(cmd.validate()) {
@@ -22,6 +27,26 @@ class AlbumController {
         }
     }
 }
+
+def list() {
+    params.max = Math.min(params.max ? params.int('max') : 10, 100)
+    [albumInstanceList: Album.list(params), albumInstanceTotal: Album.count()]
+}
+
+
+
+def show() {
+    albumInstance = Alblum.get(parms.id)
+    if (!albumInstance) {
+        flash.message = message(code: 'default.not.found.message',args: [message(code:'album.label',
+         default: 'Album'), params.id])
+         redirect(action: "list")
+         return
+    }
+    
+    [albumInstance: albumInstance]
+}
+
     class AlbumCreateCommand {
         String artist
         String title
