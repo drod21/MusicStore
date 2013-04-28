@@ -11,7 +11,7 @@ class AlbumController {
         if(cmd.validate()) {
             def album = cmd.createAlbum()
             album.save()
-            redirect(action: "show", id:album, id)
+            redirect(action: "show", id:album.id)
         } else {
             render view: "create", model:[cmd:cmd]
         }
@@ -35,7 +35,7 @@ def list() {
 
 
 def show() {
-    albumInstance = Alblum.get(parms.id)
+    albumInstance = Album.get(params.id)
     if (!albumInstance) {
         flash.message = message(code: 'default.not.found.message',args: [message(code:'album.label',
          default: 'Album'), params.id])
@@ -63,7 +63,7 @@ def show() {
             def artist = Artist.findByName(artist) ?: new Artist(name:artist)
             def album = new Album(title:title)
             songs.eachWithIndex { songTitle, i ->
-            album.addToSongs(title:songTitle, duration:durations[i])
+			album.addToSongs(title:songTitle, duration:durations[i])
             }
             return album
         }
