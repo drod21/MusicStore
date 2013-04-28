@@ -37,6 +37,9 @@ class UserController {
         session.invalidate()
         redirect(controller:"store")
     }
+	
+	def music = {
+	}
 }
 class LoginCommand {
     String login

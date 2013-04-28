@@ -8,4 +8,7 @@ class StoreController {
 		def albumList = Album.list() 
 		[albums:albumList.sort()]
     }
+	
+	def shop() {
+	}
 }
