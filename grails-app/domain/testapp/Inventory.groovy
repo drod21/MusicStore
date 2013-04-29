@@ -8,14 +8,15 @@ class Inventory {
 	Inventory(){
 		albums = [""]
 	}
-
-	def addAlbum(Album album) {
-        addAlbum = new Album(params.id)
+	
+	def getInventoryCount() {
+	return albums
     }
 
-	def deleteAlbum(Album album) {
-        Album.get(params.id)
-        Album.delete(flush: true)
+	def addAlbumToInventory(Album album) {
+    }
+
+	def removeAlbumFromInventory(Album album) {
     }
 
     static constraints = {
