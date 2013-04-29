@@ -4,6 +4,8 @@ import testapp.AlbumController
 
 class InventoryController {
 
+static scaffold = true
+
     def index() {
         redirect(action: "list")
     }

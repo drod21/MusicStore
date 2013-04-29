@@ -2,6 +2,8 @@ package testapp
 
 class ShoppingCartController {
 
+static scaffold = true
+
     def index() {
         redirect(action: "list")
     }
@@ -12,7 +14,7 @@ class ShoppingCartController {
         flash.error = "Could not add album to cart! Could find product with id [${params.id}]."
     }
     album.addToCart(album)
-    album.save(flush:true)
+    album.save(flush: true)
     redirect(action:'cart')
 }
 
