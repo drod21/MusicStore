@@ -8,14 +8,14 @@ class ShoppingCart {
 		albums = [""]
 	}
 
-    def addAlbum(Album album) {
-	album = getAlbum(params.id)
-	album.addAlbum(album)
+	def getShoppingCartCount() {
+	return albums
     }
 
-    def deleteAlbum(Album album) {
-        Album.get(params.id)
-        cart.removeFromAlbums(album)
+    def addToCart(Album album) {
+    }
+
+    def removeFromCart(Album album) {
 	}
 
 
