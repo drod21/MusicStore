@@ -19,8 +19,7 @@ class InventoryController {
     }
 
     private static def removeFromInventory(Album album) {
-            album.delete()
-                       .removeFromInventory album
+            album.removeFromInventory
     }
 
     def updateAlbum() {
@@ -30,9 +29,8 @@ class InventoryController {
     }
 
     def list() {
-        def albums = Album.id()
-        albums.each {
-        println it['title']
+        def getInventoryCount = {
+            return albums
         }
         render view: "list", model:[title:Album]
     }

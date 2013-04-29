@@ -34,9 +34,18 @@ class ShoppingCartController {
     }
 
     def list() {
-        def albums = Album.getAll(1,2,3)
-        def allAlbums = Album.list()
+        def cartItems =  {
+            if (ShoppingCart == null) {
+                flash.error = "You have no albums in your cart."
+            } else {
+                def cart = ShoppingCart.getAll()
+                def album = cart.list()
+                cart.each {
+                println it.getAt('album.title')
+                }
         render view: "list", model:[title:Album]
     }
 
+}
+}
 }
