@@ -53,7 +53,7 @@
 				<ul>
 					<li><g:link controller="user" action="music">My Music</g:link></li>
 					<li><g:link controller="store" action="shop">The Store</g:link></li>
-					<li><g:link controller="shoppingcart" action="list">Shopping Cart</g:link></li>				
+					<li><g:link controller="shoppingcart" action="list">The Store</g:link></li>				
 				</ul>			
 			</g:if>
 			<g:else>
