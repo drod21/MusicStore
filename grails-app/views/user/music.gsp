@@ -1,5 +1,6 @@
 <html>
     <head>
+	<meta name="layout" content="main">
         <title>${session?.user?.firstName}</title>
         <link rel="stylesheet" href="${createLinkTo(dir:'css',file:'main.css')}" />
         <link rel="shortcut icon" href="${createLinkTo(dir:'images',file:'favicon.ico')}" type="image/x-icon" />
