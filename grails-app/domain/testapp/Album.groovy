@@ -2,7 +2,10 @@ package testapp
 
 class Album {
 	String title
-    String genre
+	String genre
+	Integer year
+	Date dateCreated
+	Date lastUpdated
 
 
     List songs
@@ -11,6 +14,7 @@ class Album {
 
     static constraints = {
 	title(blank:false)
+	year range:1900..2100
     }
     String toString() { title }
 }
