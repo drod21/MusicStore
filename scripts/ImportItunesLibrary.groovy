@@ -18,7 +18,7 @@ target('default': "Imports an existing iTunes library into the gTunes applicatio
 
 target(importItunesLibrary: "The implementation task") {
 	if(args) {
-        def userClass = grailsApp.getDomainClass("com.g2one.gtunes.Album").clazz
+        def userClass = grailsApp.getDomainClass("TestApp.Album").clazz
         def file = new File(args.replaceAll(/\n/, ' ').trim())
 		if(file.exists()) {
 			println "Loading XML, this can take a while..."
@@ -90,7 +90,7 @@ class SAXItunesParser extends  org.xml.sax.helpers.DefaultHandler {
 			lastSong = currentBuffer.toString()
 
 			currentBuffer.delete(0, currentBuffer.size())
-			songs[lastSong] = grailsApp.getDomainClass("com.g2one.gtunes.Song").newInstance()
+			songs[lastSong] = grailsApp.getDomainClass("TestApp.Song").newInstance()
 			lastSongProps[lastSong] = [:]
 			newSongId = false
 			songProps = true			
@@ -129,7 +129,7 @@ class SAXItunesParser extends  org.xml.sax.helpers.DefaultHandler {
 			if(prop == 'album') {
 				def album = albums[value]
 				if(!album) {
-					album = grailsApp.getDomainClass("com.g2one.gtunes.Album").newInstance()
+					album = grailsApp.getDomainClass("TestApp.Album").newInstance()
 					album.title = value
 					albums[value] = album					
 				}
@@ -139,7 +139,7 @@ class SAXItunesParser extends  org.xml.sax.helpers.DefaultHandler {
 			if(prop == 'artist') {
 				def artist = artists[value]
 				if(!artist) {
-					artist = grailsApp.getDomainClass("com.g2one.gtunes.Artist").newInstance()
+					artist = grailsApp.getDomainClass("TestApp.Artist").newInstance()
 					artist.name = value
 					artists[value] = artist
 				}
