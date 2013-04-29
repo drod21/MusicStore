@@ -2,19 +2,17 @@ package testapp
 
 class ShoppingCartController {
 
-    def addToCart = {
-
-    def album = Album.get(params.id)
-
-    if (album == null) {
-        flash.error = "Could not add album to cart! Could find product with id [${params.id}]."
+    def index() {
+        redirect(action: "list")
     }
 
-    AlbumInstance.addToAlbums(album)
-
-    AlbumInstance.save(flush:true)
-
-
+    def addToCart() {
+    def album = Album.get(params.id)
+        if (album == null) {
+        flash.error = "Could not add album to cart! Could find product with id [${params.id}]."
+    }
+    album.addToCart(album)
+    album.save(flush:true)
     redirect(action:'cart')
 }
 
@@ -23,14 +21,22 @@ class ShoppingCartController {
             if (ShoppingCart == null) {
                 flash.error = "You have no albums in your cart."
             } else {
+                def cart = ShoppingCart.getAll()
+                def album = cart.list()
+                cart.each {
+                println it.getAt('album.title')
+                }
                 println("Select an album to remove:")
-                cart.getProperties(params.id)
                 cart.removeFromCart(album)
             }
 
         }
+    }
 
-
+    def list() {
+        def albums = Album.getAll(1,2,3)
+        def allAlbums = Album.list()
+        render view: "list", model:[title:Album]
     }
 
 }
