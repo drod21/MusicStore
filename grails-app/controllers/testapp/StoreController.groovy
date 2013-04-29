@@ -4,7 +4,11 @@ class StoreController {
 
     def index() { }
 
-    def albumList = Albums.list() {
-    [albums:albumList.sort()]
+	def list() {
+		def albumList = Album.list() 
+		[albums:albumList.sort()]
     }
+	
+	def shop() {
+	}
 }
