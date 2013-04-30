@@ -5,9 +5,14 @@ class User {
 	String password
 	String firstName
 	String lastName
+	boolean admin;
 
+	static hasOne = [ cart: ShoppingCart ]
 	static hasMany = [purchasedSongs:Song]
 
+	def User = {
+	  admin = false	
+	}
 
     static constraints = {
 	login(blank:false, unique:true, size:5..15)
@@ -15,5 +20,13 @@ class User {
 	firstName(blank:false)
 	lastName(blank:false)
     }
+
+	def isAdmin = {
+	  return admin
+	}
+
+	def makeAdmin = {	
+	   admin = true
+	   merge()
 
 }
