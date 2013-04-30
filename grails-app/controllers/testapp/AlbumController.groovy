@@ -1,10 +1,12 @@
 package testapp
 
 class AlbumController {
-    
-    
+    static scaffold = true
+
+    AlbumController() {
+	}
+
     def index() {
-         redirect(action: "list", params: params)
     }
 
     def save(AlbumCreateCommand cmd) {
