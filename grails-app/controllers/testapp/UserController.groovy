@@ -25,6 +25,7 @@ class UserController {
             }
             else if(u.save()) {
                 session.user = u
+		def shoppingCart = new ShoppingCart(user: u); shoppingCart.save();
                 redirect(controller:"store")
             }
             else {
