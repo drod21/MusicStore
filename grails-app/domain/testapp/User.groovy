@@ -28,5 +28,6 @@ class User {
 	def makeAdmin = {	
 	   admin = true
 	   merge()
+	}
 
 }
