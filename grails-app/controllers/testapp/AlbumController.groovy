@@ -32,7 +32,13 @@ def list() {
     [albumInstanceList: Album.list(params), albumInstanceTotal: Album.count()]
 }
 
+def addToCart(Long id) { 
+	def shoppingCart = ShoppingCart.findByUser(session.user); def album = Album.get(id); shoppingCart.addToAlbums(album);
+}
 
+def removeFromCart(Long id) {
+	def shoppingCart = ShoppingCart.findByUser(session.user); def album = Album.get(id); shoppingCart.removeFromAlbums(album);
+}
 
 def show() {
     albumInstance = Album.get(params.id)
