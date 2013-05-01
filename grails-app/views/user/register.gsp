@@ -51,6 +51,10 @@
 				<label for="lastName">Last Name:</label>
 				<g:textField name="lastName" value="${user?.lastName}"></g:textField>
 			</div>	
+			<div class ="formField">
+				<label for="admin">Admin:</label>
+				<g:checkBox name="admin" value="${false}"></g:checkBox>
+			</div>
 			<g:submitButton class="formButton" name="register" value="Register"></g:submitButton>					
 		</g:form>
 	</body>

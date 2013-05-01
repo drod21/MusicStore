@@ -7,6 +7,7 @@ class AlbumController {
 	}
 
     def index() {
+	
     }
 
     def save(AlbumCreateCommand cmd) {

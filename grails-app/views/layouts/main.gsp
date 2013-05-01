@@ -66,18 +66,20 @@
               <li><g:link controller="shoppingCart" action="list">View Cart</g:link></li>
           </ul>
         </g:if>
+		<g:else>
+			<div id="registerPane">
+					Need an account? <g:link controller="user" action="register">Signup now</g:link> 
+					to start your own personal Music collection!
+			</div>						
+		</g:else>
+			
         
         <g:if test="${session?.user?.isAdmin()}">
           <ul class="menu">
             <li><g:link controller="song" action="create">Add Song</g:link></li>
             <li><g:link controller="album" action="create">Add Album</g:link></li>		
-			</g:if>
-			<g:else>
-				<div id="registerPane">
-					Need an account? <g:link controller="user" action="register">Signup now</g:link> 
-					to start your own personal Music collection!
-				</div>						
-			</g:else>
+			<li><g:link controller="artist" action="create">Add Artist</g:link></li>
+		</g:if>
 		</div>
 	
 		<div id="contentPane">
