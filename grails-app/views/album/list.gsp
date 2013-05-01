@@ -9,7 +9,7 @@
 
         <span class="tag">${it.title}</span>
         <span class="tag">${it.price}</span>
-        <g:link controller="cart" action="addToCart" params="[album:${it.id}]">Add to cart</g:link>
+        <g:link controller="shoppingCart" action="addToCart">Add to cart</g:link>
 
       </g:each>
     </div>

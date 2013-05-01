@@ -1,6 +1,10 @@
 package testapp
 
 class ShoppingCartController {
+	static scaffold = true
+	
+	ShoppingCartController() {
+	}
 
 
     def index() {
