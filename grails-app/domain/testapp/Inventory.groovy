@@ -1,24 +1,37 @@
 package testapp
 
 class Inventory {
-	static belongsTo = [adminName:Admin]
-	static hasMany = [albums:Album]
+    static belongsTo = [adminName:Admin]
+    static hasMany = [albums:Album, movies:Movie]
+        
+    static constraints = {
+    }
 
 	
-	Inventory(){
-		albums = [""]
-	}
+    Inventory(){
+        albums = []
+        movies = []
+    }
 	
-	def getInventoryCount() {
+    def getInventoryCount() {
 	return albums
     }
 
-	def addAlbumToInventory(Album album) {
+    def addAlbumToInventory(Album album) {
+        albums.add(album)
     }
-
-	def removeAlbumFromInventory(Album album) {
+    
+    def removeAlbumFromInventory(Album album) {
+        albums -= album
     }
-
-    static constraints = {
+        
+    def addMovieToInventory(Movie movie) {
+        movies.add(movie)
     }
-}
+    
+    def removeMovieFromInventory(Movie movie) {
+        movies -= movie
+    }
+        
+    
+}    

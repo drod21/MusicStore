@@ -2,7 +2,12 @@ package testapp
 
 class StoreController {
 
-    def index() { }
+    def index() {
+       }
+    
+    def playSong() {
+        [ params: params ]
+    }
 
 	def list() {
 		def albumList = Album.list() 

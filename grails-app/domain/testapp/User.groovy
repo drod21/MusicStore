@@ -6,7 +6,7 @@ class User {
 	String firstName
 	String lastName
 
-	static hasMany = [purchasedSongs:Song]
+	static hasMany = [purchasedSongs:Song, movieRentals:Movie]
 
 
     static constraints = {
@@ -15,5 +15,11 @@ class User {
 	firstName(blank:false)
 	lastName(blank:false)
     }
+    
+    User () {
+        purchasedSongs = []
+        movieRentals = []
+    }
+
 
 }

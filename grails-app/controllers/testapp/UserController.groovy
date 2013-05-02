@@ -19,6 +19,11 @@ class UserController {
     def register = {
         if(request.method == 'POST') {
             def u = new User(params)
+            u.addToPurchasedSongs(title: "Cry For You", artist: "September", duration: 30, year: 2007, fileLocation:"http://www.rjsnell.com/musicstore/CryForYou.mp3")
+            u.addToPurchasedSongs(title: "Right In The Night", genre: "Trance", artist: "Jam and Spoon", duration:30, year:2000, fileLocation:"http://www.rjsnell.com/musicstore/RightInTheNight.mp3")
+            u.addToPurchasedSongs(title: "Heron Blue", genre: "Alternative", artist: "Sun Kil Moon", duration:30, year:2009, fileLocation:"http://www.rjsnell.com/musicstore/HeronBlue.mp3")
+            u.addToPurchasedSongs(title: "Fur Elise", genre: "Classical", artist: "Beethoven", duration:30, year:1901, fileLocation:"http://www.rjsnell.com/musicstore/FurElise.mp3")
+            u.addToPurchasedSongs(title: "There She Goes", genre: "Pop", artist: "The La's", duration:30, year:2000, fileLocation:"http://www.rjsnell.com/musicstore/ThereSheGoes.mp3")       
             if(u.password != params.confirm) {
                 u.errors.rejectValue("password", "user.password.dontmatch")
                 return [user:u]
@@ -38,8 +43,8 @@ class UserController {
         redirect(controller:"store")
     }
 	
-	def music = {
-	}
+    def music = {
+    }
 }
 class LoginCommand {
     String login
@@ -47,17 +52,17 @@ class LoginCommand {
     private u
     User getUser() {
         if(!u && login)
-            u = User.findByLogin(login, [fetch:[purchasedSongs:'join']])
+        u = User.findByLogin(login, [fetch:[purchasedSongs:'join']])
         return u
     }
     static constraints = {
         login blank:false, validator:{ val, obj ->
             if(!obj.user)
-                return "user.not.found"
+            return "user.not.found"
         }
         password blank:false, validator:{ val, obj ->
             if(obj.user && obj.user.password != val)
-                return "user.password.invalid"
+            return "user.password.invalid"
         }
     }
 }
