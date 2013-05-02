@@ -13,7 +13,7 @@ class AlbumController {
     def save(AlbumCreateCommand cmd) {
         if(cmd.validate()) {
             def album = cmd.createAlbum()
-            album.save()
+            album.save(flush:true)
             redirect(action: "show", id:album.id)
         } else {
             render view: "create", model:[cmd:cmd]
