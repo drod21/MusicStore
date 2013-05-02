@@ -46,11 +46,6 @@ class UserController {
 	render view: "/store/index"
 	}
 
-    def makeAdmin() {
-	session.user.makeAdmin()
-	render view: "/store/index"
-	}
-
     def logout = {
         session.invalidate()
         redirect(controller:"store")
