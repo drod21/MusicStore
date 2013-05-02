@@ -13,13 +13,15 @@ class Song {
     Integer trackNumber
     Album album
     Artist artist
+    String fileLocation
 
     static constraints = {
 	title(blank:false)
 	duration(min:1.00)
 	year range:1900..2100
-    price range: 0.99..5.99
-	}
+        fileLocation(blank:false)
+        price range: 0.99..5.99
+    }
 
     String toString() { title }
 }

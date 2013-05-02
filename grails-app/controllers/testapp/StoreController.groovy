@@ -4,6 +4,10 @@ class StoreController {
     static scaffold = true
 
     StoreController() { }
+   
+    def playSong() {
+        [ params: params ]
+    }
 
     def index = { }
 
