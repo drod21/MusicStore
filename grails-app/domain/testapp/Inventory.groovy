@@ -14,6 +14,7 @@ class Inventory {
     }
 
 	def addAlbumToInventory(Album album) {
+		albums.add(album)
     }
 
 	def removeAlbumFromInventory(Album album) {

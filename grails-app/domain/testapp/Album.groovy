@@ -4,13 +4,13 @@ class Album {
 	String title
 	String genre
 	Integer year
-	Date dateCreated
-	Date lastUpdated
+	//Date dateCreated
+	//Date lastUpdated
 
 
     List songs
 	static hasMany = [songs:Song]
-	static belongsTo = [artist:Artist]
+	//static belongsTo = [artist:Artist]
 
     static constraints = {
 	title(blank:false)
