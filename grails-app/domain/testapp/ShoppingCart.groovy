@@ -1,14 +1,15 @@
 package testapp
+import testapp.Album
 
 class ShoppingCart {
-	
+
 	static hasMany = [albums:Album]
 	float total
 
 	User user
 
-	ShoppingCart(){
-		albums = [""]
+	ShoppingCart() {
+		albums = [ ]
 	}
 
 	def getShoppingCartCount() {
@@ -16,6 +17,8 @@ class ShoppingCart {
     }
 
     def addToCart(Album album) {
+        albums.add(album)
+
     }
 
     def removeFromCart(Album album) {
