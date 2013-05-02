@@ -11,9 +11,11 @@ class AlbumController {
 
   def save() {
       if (session.user.isAdmin()) {
-      def album = new Album( params["album"] )
+      def album = new Album(params["album"])
+          def artist = new Artist(params["name"])
       album.properties = params
-      if ( album.save() ) {
+          artist.properties = params
+      if (album.save()) {
         redirect action: "show", id:album.id
       } else {
         render view: "edit", model: [album:album]
@@ -23,8 +25,8 @@ class AlbumController {
     def display() {
         def album = Album.get(params.id)
         if(album) {
-            //def artist = album.artist
-            //render(template:"album", model:[artist:artist, album:album])
+            def artist = album.artist
+            render(template:"album", model:[artist:artist, album:album])
         }
         else {
             render "Album not found."
@@ -36,18 +38,6 @@ def list()  {
     [albumInstanceList: Album.list(params), albumInstanceTotal: Album.count()]
 }
 
-def addToCart(Long id) { 
-	def shoppingCart = ShoppingCart.findByUser(session.user)
-    def album = Album.get(id)
-    shoppingCart.addToAlbums(album)
-}
-
-def removeFromCart(Long id) {
-	def shoppingCart = ShoppingCart.findByUser(session.user)
-    def album = Album.get(id)
-    shoppingCart.removeFromAlbums(album)
-}
-
 def show() {
     def albumInstance = Album.get(params.id)
     if (!albumInstance) {
@@ -56,7 +46,6 @@ def show() {
          redirect(action: "list")
          return
     }
-    
     [albumInstance: albumInstance]
   }
 }

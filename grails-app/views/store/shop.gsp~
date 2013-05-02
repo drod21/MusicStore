@@ -1,0 +1,62 @@
+<%@ page import="testapp.Album" %>
+
+<html>
+	<head>
+		<meta http-equiv="Content-type" content="text/html; charset=utf-8">
+		<meta name="layout" content="main">
+		<title> Titan Music Store </title>
+		<g:javascript library="prototype"></g:javascript>
+	</head>
+	<body id="body">
+		<h1>Online Store</h1>
+		<p>Browse the categories below:</p>			
+		<h2>Genres</h2>
+		<ul class="genreList">
+			<g:each var="genre" in="${genres}">
+				<li class="genre"><g:link controller="store" action="genre" params="[name:genre]">${genre}</g:link></li>
+			</g:each>			
+		</ul>
+      <h1>Albums:</h1>
+<div id="list-album" class="content scaffold-list" role="main">
+<table>
+				<thead>
+					<tr>
+					
+						<g:sortableColumn property="title" title="${message(code: 'album.title.label', default: 'Title')}" />
+					
+						<g:sortableColumn property="year" title="${message(code: 'album.year.label', default: 'Year')}" />
+					
+						<g:sortableColumn property="price" title="${message(code: 'album.price.label', default: 'Price')}" />
+					
+						<g:sortableColumn property="dateCreated" title="${message(code: 'album.dateCreated.label', default: 'Date Created')}" />
+					
+						<g:sortableColumn property="genre" title="${message(code: 'album.genre.label', default: 'Genre')}" />
+					
+						<g:sortableColumn property="lastUpdated" title="${message(code: 'album.lastUpdated.label', default: 'Last Updated')}" />
+					
+					</tr>
+				</thead>
+				<tbody>
+				<g:each in="${albumInstanceList}" status="i" var="albumInstance">
+					<tr class="${(i % 2) == 0 ? 'even' : 'odd'}">
+					
+						<td><g:link action="show" id="${albumInstance.id}">${fieldValue(bean: albumInstance, field: "title")}</g:link></td>
+					
+						<td>${fieldValue(bean: albumInstance, field: "year")}</td>
+					
+						<td>${fieldValue(bean: albumInstance, field: "price")}</td>
+					
+						<td><g:formatDate date="${albumInstance.dateCreated}" /></td>
+					
+						<td>${fieldValue(bean: albumInstance, field: "genre")}</td>
+					
+						<td><g:formatDate date="${albumInstance.lastUpdated}" /></td>
+					
+					</tr>
+				</g:each>
+				</tbody>
+			</table>
+    </div>
+	</body>
+	
+</html>

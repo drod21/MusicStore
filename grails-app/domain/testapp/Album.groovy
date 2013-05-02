@@ -11,11 +11,11 @@ class Album {
 
     List songs
 	static hasMany = [songs:Song]
-	//static belongsTo = [artist:Artist]
+	static belongsTo = [artist:Artist]
 
     static constraints = {
 	title(blank:false)
-	year range:1900..2100
+	year range: 1900..2100
     price range: 9.99..19.99
     }
     String toString() { title }

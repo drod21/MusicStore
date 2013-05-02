@@ -9,7 +9,7 @@
 		<h1>Online Store</h1>
 
 		<h2>Genre: ${genre.encodeAsHTML()}</h2>
-		<table border="0" class="albumsTable">
+		<table>
 			<tr>
 				<th>Artist</th>
 				<th>Album</th>										
@@ -19,7 +19,8 @@
 				<tr>
 					<td>${album.artist.name}</td>
 					<td><g:link action="show" controller="album" id="${album.id}">${album.title}</g:link></td>										
-					<td>${album.year}</td>																
+					<td>${album.year}</td>							
+					<td><g:link controller="shoppingCart" action="addToCart">Add to cart</g:link></td>									
 				</tr>
 			</g:each>
 		

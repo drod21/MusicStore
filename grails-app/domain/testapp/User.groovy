@@ -9,6 +9,7 @@ class User {
 	boolean admin;
 
 	static hasMany = [purchasedSongs:Song]
+    static hasOne = [cart:ShoppingCart]
 
 	def User = {
 	  admin = false	
@@ -16,6 +17,7 @@ class User {
 
     static constraints = {
 	login(blank:false, unique:true, size:5..15)
+    cart(nullable: true)
 	password(blank:false, matches:/[\w\d]+/, size:5..15)
 	firstName(blank:false)
 	lastName(blank:false)

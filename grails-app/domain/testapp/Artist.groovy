@@ -11,6 +11,4 @@ class Artist {
 	name(blank: false)
     }
     String toString() { name }
-	
-	
 }

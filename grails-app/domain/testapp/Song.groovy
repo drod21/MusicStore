@@ -7,7 +7,7 @@ class Song {
 
     String title
     String genre
-    Integer duration
+    BigDecimal duration
     Integer year
     Float price
     Integer trackNumber
@@ -16,7 +16,7 @@ class Song {
 
     static constraints = {
 	title(blank:false)
-	duration(min:1)
+	duration(min:1.00)
 	year range:1900..2100
     price range: 0.99..5.99
 	}
