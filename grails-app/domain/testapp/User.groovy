@@ -8,7 +8,7 @@ class User {
 	String lastName
 	boolean admin;
 
-	static hasMany = [purchasedSongs:Song, movieRentals:Movie]]
+	static hasMany = [purchasedSongs:Song, movieRentals:Movie]
     static hasOne = [cart:ShoppingCart]
 
 	def User = {
