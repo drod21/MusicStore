@@ -10,6 +10,7 @@ class AlbumController {
   }
 
   def save() {
+      if (session.user.isAdmin()) {
       def album = new Album( params["album"] )
       album.properties = params
       if ( album.save() ) {
@@ -17,8 +18,9 @@ class AlbumController {
       } else {
         render view: "edit", model: [album:album]
       }
+      }
   }
-    def display = {
+    def display() {
         def album = Album.get(params.id)
         if(album) {
             //def artist = album.artist
@@ -29,7 +31,7 @@ class AlbumController {
         }
     }
 
-def list = {
+def list()  {
     params.max = Math.min(params.max ? params.int('max') : 10, 100)
     [albumInstanceList: Album.list(params), albumInstanceTotal: Album.count()]
 }
@@ -46,7 +48,7 @@ def removeFromCart(Long id) {
     shoppingCart.removeFromAlbums(album)
 }
 
-def show = {
+def show() {
     def albumInstance = Album.get(params.id)
     if (!albumInstance) {
         flash.message = message(code: 'default.not.found.message',args: [message(code:'album.label',

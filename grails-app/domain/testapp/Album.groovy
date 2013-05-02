@@ -4,8 +4,9 @@ class Album {
 	String title
 	String genre
 	Integer year
-	//Date dateCreated
-	//Date lastUpdated
+    Float price
+	Date dateCreated
+	Date lastUpdated
 
 
     List songs
@@ -15,6 +16,7 @@ class Album {
     static constraints = {
 	title(blank:false)
 	year range:1900..2100
+    price range: 9.99..19.99
     }
     String toString() { title }
 }

@@ -10,10 +10,9 @@ class StoreController {
     }
 	
 	def shop = {
-		def c = Album.createCriteria()
-		def genreList = c.get {
+        def genreList = Album.withCriteria {
 			projections {
-				distinct('genre')
+				distinct "genre"
 			}
 		}
 		[genres:genreList.sort(),
