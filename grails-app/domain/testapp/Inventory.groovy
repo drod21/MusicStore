@@ -17,6 +17,7 @@ class Inventory {
 	return albums
     }
 
+
     def addAlbumToInventory(Album album) {
         albums.add(album)
     }

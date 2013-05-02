@@ -9,6 +9,7 @@ class Song {
     String genre
     Integer duration
     Integer year
+    Float price
     Integer trackNumber
     Album album
     Artist artist
@@ -19,7 +20,8 @@ class Song {
 	duration(min:1)
 	year range:1900..2100
         fileLocation(blank:false)
-	}
+        price range: 0.99..5.99
+    }
 
     String toString() { title }
 }

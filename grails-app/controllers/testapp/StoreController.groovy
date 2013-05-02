@@ -15,7 +15,7 @@ class StoreController {
     }
 	
 	def shop = {
-		def genreList = Album.withCriteria {
+        def genreList = Album.withCriteria {
 			projections {
 				distinct "genre"
 			}

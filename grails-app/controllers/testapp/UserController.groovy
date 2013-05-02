@@ -30,6 +30,8 @@ class UserController {
             }
             else if(u.save()) {
                 session.user = u
+		def shoppingCart = new ShoppingCart(user: u) 
+		u.save()
                 redirect(controller:"store")
             }
             else {
@@ -37,6 +39,11 @@ class UserController {
             }
         }
     }
+
+    def makeAdmin() {
+	session.user.makeAdmin()
+	render view: "/store/index"
+	}
 
     def logout = {
         session.invalidate()

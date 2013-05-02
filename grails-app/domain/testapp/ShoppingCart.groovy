@@ -1,8 +1,11 @@
 package testapp
 
 class ShoppingCart {
-	static belongsTo = [user:User]
+	
 	static hasMany = [albums:Album]
+	float total
+
+	User user
 
 	ShoppingCart(){
 		albums = [""]

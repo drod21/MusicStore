@@ -22,7 +22,13 @@
 						<a href="#">Profile</a> | <g:link controller="user" action="logout">Logout</g:link><br>						
 					</div>
 
-					Welcome back <span id="userFirstName">${session?.user?.firstName}!</span><br><br>
+					<g:if test="${session?.user?.isAdmin()}">
+        Admin:
+        </g:if>
+        <g:else>
+        Welcome back
+        </g:else>
+        <span id="userFirstName">${session?.user?.firstName}!</span><br><br>
 
 					You have purchased (${session.user.purchasedSongs?.size() ?: 0}) songs.<br>
 				</div>
@@ -52,17 +58,29 @@
 		<div id="navPane">
 			<g:if test="${session.user}">
 				<ul>
-					<li><g:link controller="user" action="music">My Music</g:link></li>
-					<li><g:link controller="store" action="shop">The Store</g:link></li>
-					<li><g:link controller="shoppingcart" action="list">Shopping Cart</g:link></li>				
-				</ul>			
-			</g:if>
-			<g:else>
-				<div id="registerPane">
+			<li><g:link controller="store" action="shop">Browse All</g:link></li>
+					<li><g:link controller="user" action="music">My Music</g:link></li>				
+				</ul>
+	</g:if>
+<g:if test="${session?.user}">
+          <ul class="menu">
+              <li><g:link controller="shoppingCart" action="list">View Cart</g:link></li>
+          </ul>
+        </g:if>
+		<g:else>
+			<div id="registerPane">
 					Need an account? <g:link controller="user" action="register">Signup now</g:link> 
 					to start your own personal Music collection!
-				</div>						
-			</g:else>
+			</div>						
+		</g:else>
+			
+        
+        <g:if test="${session?.user?.isAdmin()}">
+          <ul class="menu">
+            <li><g:link controller="song" action="create">Add Song</g:link></li>
+            <li><g:link controller="album" action="create">Add Album</g:link></li>		
+			<li><g:link controller="artist" action="create">Add Artist</g:link></li>
+		</g:if>
 		</div>
 	
 		<div id="contentPane">
