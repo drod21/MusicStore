@@ -1,4 +1,6 @@
 package testapp
+import testapp.Album
+import testapp.AlbumController
 
 class ShoppingCartController {
 	static scaffold = true
@@ -22,7 +24,7 @@ class ShoppingCartController {
     def removeFromCart() {
         Album album = Album.findById(params.album)
         println("Select an album to remove:")
-        session.user.cart.removeFromAlbums(album)
+        session.user.cart.removeFromCart(album)
         session.user.cart.save()
         }
 
@@ -31,7 +33,7 @@ class ShoppingCartController {
                 session.user.cart = new ShoppingCart();
             }
         params.max = Math.min(params.max ? params.int('max') : 10, 100)
-        [shoppingCartInstanceList: ShoppingCart.list(params), shoppingCartInstanceTotal: ShoppingCart.count()]
+        [shoppingCartInstanceList: session.user.cart.list(params.id), shoppingCartInstanceTotal: ShoppingCart.count()]
     }
 
 
