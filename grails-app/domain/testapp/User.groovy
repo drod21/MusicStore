@@ -3,6 +3,7 @@ package testapp
 class User {
 	String login
 	String password
+	String confirm
 	String firstName
 	String lastName
 	boolean admin;
