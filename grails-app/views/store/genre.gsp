@@ -20,7 +20,7 @@
 					<td>${album.artist.name}</td>
 					<td><g:link action="show" controller="album" id="${album.id}">${album.title}</g:link></td>										
 					<td>${album.year}</td>							
-					<td><g:link controller="shoppingCart" action="addToCart">Add to cart</g:link></td>									
+					<td><g:link controller="shoppingCart" action="addToCart" id="${album.id}">Add to cart</g:link></td>
 				</tr>
 			</g:each>
 		
